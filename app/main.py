@@ -1,5 +1,7 @@
 import logging
 from contextlib import asynccontextmanager
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -12,9 +14,16 @@ from app.repositarys.inventory_repository import inventory_repository
 from app.services.inventory_rag_service import inventory_rag_service
 
 # Configure logging
+log_dir = Path(__file__).resolve().parent.parent / "logs"
+log_dir.mkdir(exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s | %(levelname)-8s | %(name)s:%(funcName)s:%(lineno)d - %(message)s"
+    format="%(asctime)s | %(levelname)-8s | %(name)s:%(funcName)s:%(lineno)d - %(message)s",
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler(log_dir / "app.log", encoding="utf-8")
+    ]
 )
 logger = logging.getLogger(__name__)
 

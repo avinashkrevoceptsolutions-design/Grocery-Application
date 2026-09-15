@@ -1,0 +1,1007 @@
+# Application log file
+# This file is created and managed by the Python logging configuration.
+# Logs will be appended here during runtime.
+2026-09-14 16:13:54,252 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:13:55,252 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:13:55,457 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:13:55,500 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:13:55,536 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:13:55,572 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:13:55,620 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:13:55,659 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:13:55,695 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:13:55,732 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:13:55,770 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:13:55,808 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:13:55,845 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:13:55,883 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:13:55,921 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:13:55,957 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:13:55,957 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:13:58,632 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:13:58,654 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:13:58,810 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:13:59,072 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:13:59,246 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:13:59,514 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:13:59,684 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:13:59,938 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:00,112 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:00,386 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:00,562 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:00,814 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:00,983 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:01,244 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:01,426 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:01,729 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:01,913 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:02,163 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:02,330 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:02,596 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:02,765 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:03,024 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:03,196 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:03,451 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:03,629 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:03,879 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:14:04,064 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:14:04,230 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:14:04,232 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:14:52,059 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:14:52,059 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:14:52,093 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:14:57,003 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:14:57,611 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:14:57,810 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:14:57,842 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:14:57,876 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:14:57,907 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:14:57,942 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:14:57,977 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:14:58,011 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:14:58,045 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:14:58,079 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:14:58,113 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:14:58,146 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:14:58,180 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:14:58,214 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:14:58,248 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:14:58,248 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:14:59,859 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:14:59,874 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:00,061 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:00,352 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:00,536 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:00,799 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:00,991 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:01,264 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:01,494 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:01,766 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:01,950 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:02,260 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:02,446 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:02,714 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:02,899 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:03,173 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:03,359 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:03,622 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:03,804 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:04,073 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:04,258 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:04,527 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:04,714 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:04,982 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:05,174 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:05,457 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:15:05,651 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:15:05,834 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:15:05,836 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:28:46,658 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:28:46,659 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:28:46,695 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:28:49,392 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:28:50,030 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:28:50,230 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:28:50,262 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:28:50,292 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:28:50,321 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:28:50,355 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:28:50,386 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:28:50,418 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:28:50,451 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:28:50,485 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:28:50,517 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:28:50,556 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:28:50,591 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:28:50,623 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:28:50,655 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:28:50,655 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:28:52,363 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:52,369 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:28:52,539 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:52,801 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:52,995 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:53,256 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:53,447 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:53,721 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:53,908 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:54,198 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:54,369 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:54,620 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:54,807 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:55,070 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:55,244 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:55,496 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:55,666 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:55,922 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:56,095 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:56,360 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:56,531 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:56,778 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:56,954 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:57,207 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:57,387 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:57,638 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:28:57,822 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:28:57,991 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:28:57,992 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:33:07,705 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:33:07,706 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:33:07,735 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:33:10,655 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:33:11,256 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:33:11,462 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:33:11,496 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:33:11,532 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:33:11,568 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:33:11,606 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:33:11,645 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:33:11,684 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:33:11,722 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:33:11,760 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:33:11,796 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:33:11,834 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:33:11,886 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:33:11,924 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:33:11,961 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:33:11,962 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:33:13,683 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:13,687 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:33:13,859 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:14,124 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:14,292 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:14,550 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:14,734 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:14,995 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:15,161 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:15,420 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:15,592 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:15,848 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:16,016 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:16,284 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:16,462 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:16,716 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:16,884 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:17,144 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:17,313 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:17,573 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:17,742 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:18,000 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:18,167 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:18,427 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:18,600 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:18,861 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:33:19,030 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:33:19,196 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:33:19,198 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:34:44,717 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:34:44,717 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:34:44,752 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:34:59,954 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:35:00,539 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:35:00,727 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:35:00,758 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:35:00,788 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:35:00,818 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:35:00,850 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:35:00,882 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:35:00,914 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:35:00,946 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:35:00,981 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:35:01,014 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:35:01,046 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:35:01,080 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:35:01,112 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:35:01,143 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:35:01,143 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:35:02,779 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:02,788 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:35:02,955 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:03,229 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:03,402 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:03,666 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:03,841 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:04,099 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:04,274 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:04,527 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:04,700 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:04,958 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:05,156 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:05,416 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:05,589 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:05,852 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:06,027 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:06,287 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:06,460 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:06,721 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:06,896 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:07,156 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:07,328 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:07,582 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:07,758 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:08,022 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:35:08,205 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:35:08,376 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:35:08,377 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:37:01,656 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:37:01,656 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:37:01,686 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:37:04,580 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:37:05,204 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:37:05,482 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:37:05,513 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:37:05,544 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:37:05,575 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:37:05,615 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:37:05,649 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:37:05,684 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:37:05,726 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:37:05,761 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:37:05,798 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:37:05,832 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:37:05,866 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:37:05,899 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:37:05,931 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:37:05,932 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:37:07,527 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:07,531 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:37:07,700 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:07,977 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:08,151 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:08,402 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:08,579 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:08,836 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:09,024 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:09,278 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:09,451 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:09,713 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:09,888 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:10,145 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:10,328 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:10,594 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:10,766 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:11,018 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:11,196 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:11,460 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:11,637 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:11,890 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:12,072 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:12,354 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:12,526 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:12,783 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:37:12,963 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:37:13,135 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:37:13,136 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:38:32,458 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:38:32,459 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:38:32,490 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:39:46,997 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:39:47,617 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:39:47,823 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:39:47,858 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:39:47,889 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:39:47,920 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:39:47,961 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:39:48,000 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:39:48,034 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:39:48,067 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:39:48,104 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:39:48,137 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:39:48,170 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:39:48,203 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:39:48,237 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:39:48,270 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:39:48,270 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:39:49,963 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:49,990 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:39:50,138 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:50,399 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:50,574 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:50,833 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:51,007 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:51,268 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:51,448 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:51,710 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:51,886 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:52,139 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:52,315 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:52,562 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:52,736 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:52,990 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:53,164 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:53,418 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:53,591 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:53,866 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:54,041 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:54,299 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:54,470 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:54,731 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:54,906 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:55,156 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:39:55,332 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:39:55,530 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:39:55,533 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:40:09,300 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:40:09,300 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:40:09,331 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:40:12,197 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:40:12,680 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:40:12,881 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:40:12,913 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:40:12,943 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:40:12,976 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:40:13,009 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:40:13,042 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:40:13,075 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:40:13,108 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:40:13,141 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:40:13,179 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:40:13,212 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:40:13,245 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:40:13,277 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:40:13,310 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:40:13,311 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:40:14,886 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:14,907 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:40:15,063 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:15,325 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:15,497 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:15,762 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:15,935 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:16,187 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:16,356 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:16,609 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:16,784 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:17,037 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:17,212 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:17,468 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:17,638 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:17,896 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:18,068 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:18,345 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:18,515 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:18,777 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:18,964 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:19,216 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:19,386 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:19,631 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:19,813 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:20,065 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:20,235 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:20,403 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:40:20,404 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:40:36,420 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:40:36,420 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:40:36,450 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:40:39,282 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:40:39,821 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:40:40,031 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:40:40,068 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:40:40,103 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:40:40,137 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:40:40,175 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:40:40,210 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:40:40,250 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:40:40,288 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:40:40,323 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:40:40,359 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:40:40,411 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:40:40,463 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:40:40,514 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:40:40,553 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:40:40,553 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:40:42,115 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:40:42,136 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:42,315 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:42,595 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:42,774 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:43,042 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:43,238 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:43,500 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:43,679 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:43,946 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:44,136 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:44,404 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:44,608 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:44,886 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:45,061 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:45,345 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:45,523 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:45,800 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:45,978 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:46,251 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:46,428 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:46,698 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:46,880 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:47,159 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:47,337 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:47,620 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:40:47,807 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:40:47,981 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:40:47,981 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:52:19,334 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:52:19,334 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:52:19,383 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:52:22,368 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:52:23,012 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:52:23,218 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:52:23,252 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:52:23,285 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:52:23,319 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:52:23,358 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:52:23,396 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:52:23,434 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:52:23,471 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:52:23,508 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:52:23,542 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:52:23,578 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:52:23,615 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:52:23,651 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:52:23,686 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:52:23,687 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:52:25,212 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:52:25,278 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:25,460 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:25,730 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:25,917 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:26,173 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:26,354 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:26,638 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:26,834 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:27,104 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:27,287 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:27,574 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:27,755 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:28,008 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:28,198 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:28,476 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:28,669 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:28,936 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:29,119 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:29,385 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:29,567 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:29,837 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:30,022 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:30,276 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:30,476 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:30,736 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:30,916 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:31,098 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:52:31,101 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:52:43,914 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:52:43,914 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:52:43,949 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:52:46,670 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:52:47,178 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:52:47,374 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:52:47,407 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:52:47,439 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:52:47,472 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:52:47,506 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:52:47,540 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:52:47,574 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:52:47,608 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:52:47,644 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:52:47,680 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:52:47,717 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:52:47,754 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:52:47,789 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:52:47,840 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:52:47,840 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:52:49,386 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:52:49,409 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:49,586 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:49,861 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:50,039 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:50,302 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:50,481 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:50,750 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:50,934 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:51,201 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:51,384 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:51,660 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:51,845 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:52,118 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:52,301 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:52,565 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:52,741 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:53,032 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:53,220 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:53,484 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:53,663 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:53,916 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:54,091 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:54,347 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:54,533 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:54,788 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:52:54,965 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:52:55,142 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 OK"
+2026-09-14 16:52:55,145 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 16:52:55,249 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 16:52:55,250 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 16:52:55,281 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 16:52:57,952 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 16:52:58,415 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 16:52:58,602 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 16:52:58,635 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 16:52:58,666 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 16:52:58,697 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 16:52:58,741 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 16:52:58,773 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 16:52:58,806 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 16:52:58,851 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 16:52:58,885 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 16:52:58,920 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 16:52:58,955 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 16:52:58,990 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 16:52:59,026 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 16:52:59,059 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 16:52:59,059 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 16:53:00,648 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-14 16:53:00,652 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:00,824 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:01,096 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:01,276 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:01,542 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:01,716 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:01,980 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:02,152 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:02,410 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:02,579 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:02,827 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:03,022 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:03,267 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:03,448 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:03,698 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:03,885 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:04,133 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:04,316 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:04,571 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:04,743 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:04,996 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:05,168 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:05,416 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:05,605 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:05,870 | INFO     | httpx:_send_single_request:1025 - HTTP Request: GET https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-09-14 16:53:06,057 | INFO     | httpx:_send_single_request:1025 - HTTP Request: PUT https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points?wait=true "HTTP/1.1 200 OK"
+2026-09-14 16:53:06,231 | INFO     | httpx:_send_single_request:1025 - HTTP Request: POST https://ce12e006-31a1-469c-8dc2-c46d255d5125.eu-west-1-0.aws.cloud.qdrant.io:6333/collections/inventory/points/scroll "HTTP/1.1 200 Ok"
+2026-09-14 16:53:06,235 | INFO     | app.services.inventory_rag_service:sync_all:211 - Synced 13 inventory items
+2026-09-14 17:02:24,379 | INFO     | app.main:lifespan:53 - Shutting down Authentication & Authorization API...
+2026-09-14 17:02:24,379 | INFO     | app.database.connection:close_mongo_connection:50 - Closing MongoDB connection...
+2026-09-14 17:02:24,409 | INFO     | app.database.connection:close_mongo_connection:55 - MongoDB connection closed.
+2026-09-14 17:02:31,395 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-14 17:02:31,996 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-14 17:02:32,210 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-14 17:02:32,242 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-14 17:02:32,278 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-14 17:02:32,307 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-14 17:02:32,340 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-14 17:02:32,374 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-14 17:02:32,409 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-14 17:02:32,441 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-14 17:02:32,475 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-14 17:02:32,510 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-14 17:02:32,542 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-14 17:02:32,574 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-14 17:02:32,607 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-14 17:02:32,640 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-14 17:02:32,640 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-14 17:02:33,985 | ERROR    | app.main:lifespan:48 - Error during startup initialization: [WinError 10054] An existing connection was forcibly closed by the remote host
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection.py", line 156, in _connect
+    stream = stream.start_tls(**kwargs)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_backends\sync.py", line 154, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 137, in send_inner
+    response = self._client.send(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\main.py", line 44, in lifespan
+    await inventory_rag_service.sync_all(
+        await inventory_repository.list_all_items()
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\services\inventory_rag_service.py", line 183, in sync_all
+    await self.upsert_item(item)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\services\inventory_rag_service.py", line 143, in upsert_item
+    self._create_collection(len(vector))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\services\inventory_rag_service.py", line 76, in _create_collection
+    collections = client.get_collections().collections
+                  ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\qdrant_client.py", line 1577, in get_collections
+    return self._client.get_collections(**kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\qdrant_remote.py", line 1871, in get_collections
+    self.http.collections_api.get_collections().result
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api\collections_api.py", line 527, in get_collections
+    return self._build_for_get_collections()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api\collections_api.py", line 232, in _build_for_get_collections
+    return self.api_client.request(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        type_=m.InlineResponse2006,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        headers=headers if headers else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 98, in request
+    return self.send(request, type_)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 115, in send
+    response = self.middleware(request, self.send_inner)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 152, in new_middleware
+    return middleware(request, inner_send)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 150, in inner_send
+    return current_middleware(request, call_next)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 253, in __call__
+    return call_next(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 139, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-09-14 17:10:33,627 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-14 17:11:56,024 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-14 17:12:36,328 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-14 17:20:21,120 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-14 17:36:22,965 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-14 18:23:35,580 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-14 18:35:58,178 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-15 10:48:08,864 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-15 10:48:09,766 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-15 10:48:09,992 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-15 10:48:10,029 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-15 10:48:10,066 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-15 10:48:10,102 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-15 10:48:10,143 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-15 10:48:10,181 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-15 10:48:10,219 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-15 10:48:10,258 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-15 10:48:10,297 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-15 10:48:10,336 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-15 10:48:10,375 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-15 10:48:10,416 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-15 10:48:10,455 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-15 10:48:10,493 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-15 10:48:10,494 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-15 10:48:12,952 | ERROR    | app.main:lifespan:48 - Error during startup initialization: [WinError 10054] An existing connection was forcibly closed by the remote host
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection.py", line 156, in _connect
+    stream = stream.start_tls(**kwargs)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_backends\sync.py", line 154, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 137, in send_inner
+    response = self._client.send(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\main.py", line 44, in lifespan
+    await inventory_rag_service.sync_all(
+        await inventory_repository.list_all_items()
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\services\inventory_rag_service.py", line 183, in sync_all
+    await self.upsert_item(item)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\services\inventory_rag_service.py", line 143, in upsert_item
+    self._create_collection(len(vector))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\services\inventory_rag_service.py", line 76, in _create_collection
+    collections = client.get_collections().collections
+                  ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\qdrant_client.py", line 1577, in get_collections
+    return self._client.get_collections(**kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\qdrant_remote.py", line 1871, in get_collections
+    self.http.collections_api.get_collections().result
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api\collections_api.py", line 527, in get_collections
+    return self._build_for_get_collections()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api\collections_api.py", line 232, in _build_for_get_collections
+    return self.api_client.request(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        type_=m.InlineResponse2006,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        headers=headers if headers else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 98, in request
+    return self.send(request, type_)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 115, in send
+    response = self.middleware(request, self.send_inner)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 152, in new_middleware
+    return middleware(request, inner_send)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 150, in inner_send
+    return current_middleware(request, call_next)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 253, in __call__
+    return call_next(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 139, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-09-15 10:49:13,372 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-15 10:58:19,834 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 10:58:20,823 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 10:58:29,391 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 10:58:29,452 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-15 10:58:29,453 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-09-15 10:58:36,536 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-15 10:58:36,536 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2026-09-15 10:58:42,916 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 10:58:42,979 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-15 10:58:42,979 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 45.000000 seconds
+2026-09-15 10:59:30,564 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 11:08:37,722 | INFO | incident_agent | AI Incident Agent API is running
+2026-09-15 11:09:08,755 | INFO | incident_agent | AI Incident Agent API is running
+2026-09-15 11:10:04,343 | INFO | incident_agent | AI Incident Agent API is running
+2026-09-15 11:10:22,111 | INFO     | app.main:lifespan:40 - Starting up Authentication & Authorization API...
+2026-09-15 11:10:22,732 | INFO     | app.database.connection:connect_to_mongo:42 - Successfully connected to MongoDB database: grocery_ecommerce
+2026-09-15 11:10:22,936 | INFO     | app.database.connection:init_db_indexes:72 - Users collection unique indexes successfully ensured.
+2026-09-15 11:10:22,976 | INFO     | app.database.seed:seed_startup_data:142 - Admin user already exists: admin01
+2026-09-15 11:10:23,010 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: john_doe
+2026-09-15 11:10:23,046 | INFO     | app.database.seed:seed_startup_data:168 - Customer user already exists: jane_smith
+2026-09-15 11:10:23,083 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Fresh Organic Bananas
+2026-09-15 11:10:23,119 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Organic Honeycrisp Apples
+2026-09-15 11:10:23,158 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Whole Organic Milk
+2026-09-15 11:10:23,194 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Pasture-Raised Grade A Eggs
+2026-09-15 11:10:23,231 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Artisan Sourdough Bread
+2026-09-15 11:10:23,268 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Greek Plain Yogurt
+2026-09-15 11:10:23,311 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Extra Virgin Olive Oil
+2026-09-15 11:10:23,349 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Raw Wildflower Honey
+2026-09-15 11:10:23,385 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Royal Basmati Rice
+2026-09-15 11:10:23,422 | INFO     | app.database.seed:seed_startup_data:188 - Seeded/Synced Inventory item: Boneless Chicken Breast
+2026-09-15 11:10:23,422 | INFO     | app.database.seed:seed_startup_data:190 - Startup data seeding completed successfully.
+2026-09-15 11:10:24,831 | ERROR    | app.main:lifespan:48 - Error during startup initialization: [WinError 10054] An existing connection was forcibly closed by the remote host
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_sync\connection.py", line 156, in _connect
+    stream = stream.start_tls(**kwargs)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_backends\sync.py", line 154, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 137, in send_inner
+    response = self._client.send(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\main.py", line 44, in lifespan
+    await inventory_rag_service.sync_all(
+        await inventory_repository.list_all_items()
+    )
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\services\inventory_rag_service.py", line 183, in sync_all
+    await self.upsert_item(item)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\services\inventory_rag_service.py", line 143, in upsert_item
+    self._create_collection(len(vector))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\app\services\inventory_rag_service.py", line 76, in _create_collection
+    collections = client.get_collections().collections
+                  ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\qdrant_client.py", line 1577, in get_collections
+    return self._client.get_collections(**kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\qdrant_remote.py", line 1871, in get_collections
+    self.http.collections_api.get_collections().result
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api\collections_api.py", line 527, in get_collections
+    return self._build_for_get_collections()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api\collections_api.py", line 232, in _build_for_get_collections
+    return self.api_client.request(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        type_=m.InlineResponse2006,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        headers=headers if headers else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 98, in request
+    return self.send(request, type_)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 115, in send
+    response = self.middleware(request, self.send_inner)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 152, in new_middleware
+    return middleware(request, inner_send)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 150, in inner_send
+    return current_middleware(request, call_next)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 253, in __call__
+    return call_next(request)
+  File "C:\Users\Admin\Desktop\GROCERYE-COMMERCE APPLICATION\venv\Lib\site-packages\qdrant_client\http\api_client.py", line 139, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-09-15 11:11:39,125 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 11:11:41,257 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 11:11:49,366 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 11:11:49,556 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-15 11:11:49,557 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 28.000000 seconds
+2026-09-15 11:12:19,920 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 11:12:19,981 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-15 11:13:17,028 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 11:13:17,991 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 11:13:26,131 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 11:13:26,192 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-15 11:13:26,193 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 11.000000 seconds
+2026-09-15 11:13:39,235 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 11:13:39,299 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-15 11:13:39,299 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 44.000000 seconds
+2026-09-15 11:14:25,495 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
