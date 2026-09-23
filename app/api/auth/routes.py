@@ -1,5 +1,7 @@
 from typing import Any, Dict
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, status, HTTPException
+from bson import ObjectId
+from bson.errors import InvalidId
 from app.domain.Users.schemas import (
     CustomerSignupRequest,
     LoginRequest,
@@ -48,3 +50,48 @@ async def login(login_data: LoginRequest):
 )
 async def get_me(current_user: Dict[str, Any] = Depends(get_current_user)):
     return UserResponse(**current_user)
+
+
+@router.get(
+    "/users/{user_id}",
+    response_model=UserResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Get User by ID"
+)
+async def get_user(
+    user_id: str,
+    current_user: Dict[str, Any] = Depends(get_current_user)
+) -> UserResponse:
+    """
+    Retrieve a user by their MongoDB ObjectId.
+    
+    Args:
+        user_id: MongoDB ObjectId as a string (24 hex characters)
+        current_user: Current authenticated user (required for authorization)
+    
+    Returns:
+        UserResponse: User data if found
+    
+    Raises:
+        HTTPException: 400 if user_id is not a valid MongoDB ObjectId
+        HTTPException: 404 if user is not found
+    """
+    try:
+        # Validate that user_id is a valid MongoDB ObjectId
+        object_id = ObjectId(user_id)
+    except InvalidId:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Invalid user ID format: {user_id}"
+        )
+    
+    # Retrieve user from database
+    user = await auth_service.get_user_by_id(object_id)
+    
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"404 Not Found - User not found - user_id={user_id}"
+        )
+    
+    return UserResponse(**user)
