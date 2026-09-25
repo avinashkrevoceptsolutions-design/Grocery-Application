@@ -1,5 +1,4 @@
 import logging
-import time
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -14,31 +13,6 @@ from app.api.V1.router import api_v1_router
 from app.repositarys.inventory_repository import inventory_repository
 from app.services.inventory_rag_service import inventory_rag_service
 
-class ExpiringFileHandler(logging.FileHandler):
-    """Delete the active log file once it has reached the retention period."""
-
-    def __init__(self, filename, retention_seconds=24 * 60 * 60, **kwargs):
-        self.retention_seconds = retention_seconds
-        super().__init__(filename, **kwargs)
-
-    def emit(self, record):
-        self.acquire()
-        try:
-            if (
-                self.stream is not None
-                and Path(self.baseFilename).exists()
-                and time.time() - Path(self.baseFilename).stat().st_mtime
-                >= self.retention_seconds
-            ):
-                self.close()
-                Path(self.baseFilename).unlink(missing_ok=True)
-                self.stream = self._open()
-
-            super().emit(record)
-        finally:
-            self.release()
-
-
 # Configure logging
 log_dir = Path(__file__).resolve().parent.parent / "logs"
 log_dir.mkdir(exist_ok=True)
@@ -48,7 +22,7 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)-8s | %(name)s:%(funcName)s:%(lineno)d - %(message)s",
     handlers=[
         logging.StreamHandler(),
-        ExpiringFileHandler(log_dir / "app.log", encoding="utf-8")
+        logging.FileHandler(log_dir / "app.log", encoding="utf-8")
     ]
 )
 logger = logging.getLogger(__name__)
