@@ -48,3 +48,7 @@ async def login(login_data: LoginRequest):
 )
 async def get_me(current_user: Dict[str, Any] = Depends(get_current_user)):
     return UserResponse(**current_user)
+
+
+
+
