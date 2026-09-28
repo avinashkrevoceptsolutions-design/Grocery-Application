@@ -1,4 +1,5 @@
 import logging
+from logging.handlers import TimedRotatingFileHandler
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -22,7 +23,13 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)-8s | %(name)s:%(funcName)s:%(lineno)d - %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler(log_dir / "app.log", encoding="utf-8")
+        TimedRotatingFileHandler(
+            filename=log_dir / "app.log",
+            when="midnight",
+            interval=1,
+            backupCount=7,
+            encoding="utf-8"
+        )
     ]
 )
 logger = logging.getLogger(__name__)
