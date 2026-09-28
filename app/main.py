@@ -1,4 +1,5 @@
 import logging
+import sys
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -13,18 +14,31 @@ from app.api.V1.router import api_v1_router
 from app.repositarys.inventory_repository import inventory_repository
 from app.services.inventory_rag_service import inventory_rag_service
 
-# Configure logging
+# Configure logging with error handling
 log_dir = Path(__file__).resolve().parent.parent / "logs"
-log_dir.mkdir(exist_ok=True)
+try:
+    log_dir.mkdir(exist_ok=True)
+except Exception as e:
+    print(f"WARNING: Failed to create log directory {log_dir}: {e}", file=sys.stderr)
+    log_dir = None
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)-8s | %(name)s:%(funcName)s:%(lineno)d - %(message)s",
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler(log_dir / "app.log", encoding="utf-8")
-    ]
-)
+handlers = [logging.StreamHandler()]
+if log_dir:
+    try:
+        handlers.append(logging.FileHandler(log_dir / "app.log", encoding="utf-8"))
+    except Exception as e:
+        print(f"WARNING: Failed to create file handler for {log_dir / 'app.log'}: {e}", file=sys.stderr)
+
+try:
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s | %(levelname)-8s | %(name)s:%(funcName)s:%(lineno)d - %(message)s",
+        handlers=handlers
+    )
+except Exception as e:
+    print(f"ERROR: Logging configuration failed: {e}", file=sys.stderr)
+    raise
+
 logger = logging.getLogger(__name__)
 
 
