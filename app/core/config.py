@@ -36,7 +36,6 @@ class Settings(BaseSettings):
     # LOW_STOCK_THRESHOLD: int = Field(default=10, ge=1)
 
     # Groq settings
-    GROK_API_KEY: Optional[str] = None
     GROQ_API_KEY: Optional[str] = None
     GROQ_BASE_URL: str = "https://api.groq.com/openai/v1"
     GROQ_MODEL: str = "qwen/qwen3.6-27b"
