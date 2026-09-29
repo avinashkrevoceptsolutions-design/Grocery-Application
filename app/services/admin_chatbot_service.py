@@ -1,6 +1,7 @@
 
 
 
+import logging
 import re
 from typing import Any, Dict, Optional
 from uuid import uuid4
@@ -8,11 +9,14 @@ from uuid import uuid4
 from fastapi import HTTPException, status
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
+from openai import APIError, APIConnectionError, APITimeoutError, AuthenticationError
 
 from app.core.config import settings
 from app.repositarys.admin_chat_repository import admin_chat_repository
 from app.services.inventory_rag_service import inventory_rag_service
 from app.services.inventory_service import inventory_service
+
+logger = logging.getLogger(__name__)
 
 
 class AdminChatbotService:
@@ -117,9 +121,13 @@ class AdminChatbotService:
         )
 
     def _get_llm(self):
-        api_key = settings.GROK_API_KEY or settings.GROQ_API_KEY
+        api_key = settings.GROQ_API_KEY
 
         if not api_key:
+            logger.error(
+                "Groq API key is not configured. "
+                "Please set GROQ_API_KEY environment variable."
+            )
             raise HTTPException(
                 status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
                 detail="Groq is not configured.",
@@ -130,9 +138,16 @@ class AdminChatbotService:
             api_key=api_key,
             base_url=settings.GROQ_BASE_URL,
             temperature=0,
+            timeout=30.0,
+            max_retries=1,
         )
 
-    async def ask( self, admin_user: Dict[str, Any], question: str, conversation_id: Optional[str] = None, ):
+    async def ask(
+        self,
+        admin_user: Dict[str, Any],
+        question: str,
+        conversation_id: Optional[str] = None,
+    ):
         if not question.strip():
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
@@ -159,26 +174,21 @@ class AdminChatbotService:
         messages = [
             SystemMessage(
                 content=(
-                   "You are an admin grocery inventory assistant. "
-                   "Answer only using the inventory context and chat history. "
-                   "Do not make up product names, quantities, counts or prices. "
+                    "You are an admin grocery inventory assistant. "
+                    "Answer only using the inventory context and chat history. "
+                    "Do not make up product names, quantities, counts or prices. "
                     "Keep answers short. "
                     "Do not show your reasoning or thinking process. "
-                   "Return only the final answer."
+                    "Return only the final answer."
                 )
             )
         ]
 
         for message in history:
             if message["role"] == "user":
-                messages.append(
-                    HumanMessage(content=message["content"])
-                )
-
+                messages.append(HumanMessage(content=message["content"]))
             elif message["role"] == "assistant":
-                messages.append(
-                    AIMessage(content=message["content"])
-                )
+                messages.append(AIMessage(content=message["content"]))
 
         messages.append(
             HumanMessage(
@@ -191,21 +201,61 @@ class AdminChatbotService:
 
         try:
             response = await self._get_llm().ainvoke(messages)
-        except Exception:
+        except AuthenticationError as e:
+            logger.error(
+                f"Groq authentication failed: {str(e)}. "
+                "Please verify that GROQ_API_KEY is valid and not expired.",
+                exc_info=True,
+            )
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Groq authentication failed. Please check API credentials.",
+            )
+        except APITimeoutError as e:
+            logger.error(
+                f"Groq API request timed out after 30 seconds: {str(e)}. "
+                "The Groq service may be slow or unresponsive.",
+                exc_info=True,
+            )
+            raise HTTPException(
+                status_code=status.HTTP_502_BAD_GATEWAY,
+                detail="Groq API request timed out. Please try again.",
+            )
+        except APIConnectionError as e:
+            logger.error(
+                f"Failed to connect to Groq API: {str(e)}. "
+                "Please check network connectivity and Groq service status.",
+                exc_info=True,
+            )
+            raise HTTPException(
+                status_code=status.HTTP_502_BAD_GATEWAY,
+                detail="Could not connect to Groq. Please check your network.",
+            )
+        except APIError as e:
+            logger.error(
+                f"Groq API error: {str(e)}. "
+                "Status code: {getattr(e, 'status_code', 'unknown')}. "
+                "This may indicate rate limiting, quota exceeded, or service issues.",
+                exc_info=True,
+            )
+            raise HTTPException(
+                status_code=status.HTTP_502_BAD_GATEWAY,
+                detail="Could not get response from Groq.",
+            )
+        except Exception as e:
+            logger.error(
+                f"Unexpected error while calling Groq API: {type(e).__name__}: {str(e)}. "
+                "Please check application logs for details.",
+                exc_info=True,
+            )
             raise HTTPException(
                 status_code=status.HTTP_502_BAD_GATEWAY,
                 detail="Could not get response from Groq.",
             )
 
-        # if isinstance(response.content, str):
-        #     answer = response.content
-        # else:
-        #     answer = str(response.content)
-        
         answer = str(response.content)
-        answer = re.sub(r"<think>.*?</think>","",answer,flags=re.DOTALL,).strip()
+        answer = re.sub(r"<think>.*?</think>", "", answer, flags=re.DOTALL).strip()
 
-        
         await admin_chat_repository.add_message(
             admin_id,
             conversation_id,
@@ -227,4 +277,3 @@ class AdminChatbotService:
 
 
 admin_chatbot_service = AdminChatbotService()
-
