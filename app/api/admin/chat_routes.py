@@ -8,13 +8,13 @@ from app.services.admin_chatbot_service import admin_chatbot_service
 
 
 router = APIRouter(
-    prefix="/admin",
+    prefix="/admin/chat",
     tags=["Admin AI Chatbot"],
 )
 
 
 @router.post(
-    "/chat",
+    "",
     response_model=AdminChatResponse,
     status_code=status.HTTP_200_OK,
     summary="Ask the Admin Inventory Chatbot",
