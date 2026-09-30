@@ -110,20 +110,6 @@ class AuthService:
         """
 
         # -------------------------------------------------
-        # TEST INCIDENT - INTENTIONAL 404
-        # -------------------------------------------------
-
-        if data.email.strip().lower() == "incident-test@example.com":
-
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=(
-                    "TEST INCIDENT: Login service returned 404 "
-                    "- User resource not found"
-                ),
-            )
-
-        # -------------------------------------------------
         # NORMAL LOGIN FLOW
         # -------------------------------------------------
 
