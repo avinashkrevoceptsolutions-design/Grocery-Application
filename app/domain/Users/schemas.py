@@ -1,56 +1,70 @@
+from pydantic import BaseModel, EmailStr, Field
+from typing import Optional
 from datetime import datetime
 from enum import Enum
-from typing import Optional
-from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 
 class UserRole(str, Enum):
-    ADMIN = "ADMIN"
-    CUSTOMER = "CUSTOMER"
+    ADMIN = "admin"
+    CUSTOMER = "customer"
 
 
-class CustomerSignupRequest(BaseModel):
-    first_name: str = Field(...,min_length=1, max_length=50, description="Customer First Name")
-    last_name: str = Field(..., min_length=1, max_length=50, description="Customer Last Name")
-    email: EmailStr = Field(..., description="Unique Email Address")
-    username: str = Field(..., min_length=3, max_length=30, description="Unique Username")
-    phone_number: str = Field(..., min_length=7, max_length=20, description="Unique Phone Number")
-    password: str = Field(..., min_length=6, max_length=128, description="Password")
+class UserCreate(BaseModel):
+    email: EmailStr
+    username: str
+    password: str
+    phone_number: Optional[str] = None
+    role: UserRole = UserRole.CUSTOMER
 
 
-class LoginRequest(BaseModel):
-    email: EmailStr = Field(..., description="Registered Email Address")
-    password: str = Field(..., description="Password")
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
 
 
 class UserResponse(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
-
-    id: str
-    first_name: str
-    last_name: str
+    id: str = Field(alias="_id")
     email: EmailStr
     username: str
-    phone_number: str
+    phone_number: Optional[str] = None
     role: UserRole
-    created_at: Optional[datetime] = None
+    created_at: datetime
+    updated_at: datetime
+
+    class Config:
+        populate_by_name = True
 
 
-class MessageResponse(BaseModel):
-    message: str = Field(..., description="Response message", examples=["User registered successfully"])
-
-
-class TokenResponse(BaseModel):
-    message: str = Field(default="Login successfully", description="Status message", examples=["Login successfully"])
-    access_token: str
-    token_type: str = "bearer"
-    expires_in: int
-
-
-class TokenPayload(BaseModel):
-    sub: str
-    user_id: str
+class UserInDB(BaseModel):
+    id: str = Field(alias="_id")
+    email: EmailStr
     username: str
-    email: str
+    password_hash: str
+    phone_number: Optional[str] = None
     role: UserRole
-    exp: Optional[int] = None
+    password_reset_token: Optional[str] = None
+    password_reset_expires: Optional[datetime] = None
+    created_at: datetime
+    updated_at: datetime
+
+    class Config:
+        populate_by_name = True
+
+
+class ForgotPasswordRequest(BaseModel):
+    email: EmailStr
+
+
+class ResetPasswordRequest(BaseModel):
+    token: str
+    new_password: str = Field(..., min_length=8)
+
+
+class ForgotPasswordResponse(BaseModel):
+    message: str
+    email: str
+
+
+class ResetPasswordResponse(BaseModel):
+    message: str
+    success: bool
