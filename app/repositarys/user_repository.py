@@ -1,140 +1,126 @@
+from motor.motor_asyncio import AsyncIOMotorDatabase, AsyncIOMotorCollection
+from app.database.connection import db
+from datetime import datetime
+from typing import Optional, List
+import logging
 
-from datetime import datetime, timezone
-from typing import Any, Dict, List, Optional
-
-from bson import ObjectId
-
-from app.database.connection import get_database
+logger = logging.getLogger(__name__)
 
 
 class UserRepository:
+    def __init__(self, db: AsyncIOMotorDatabase):
+        self.db = db
+        self.collection: AsyncIOMotorCollection = db["users"]
 
-    def _collection(self):
-        return get_database()["users"]
-
-    def _format_doc(self, doc):
-        if not doc:
-            return None
-
-        doc["id"] = str(doc.pop("_id"))
-        return doc
-
-    async def get_by_id(self, user_id: str):
-        try:
-            user_id = ObjectId(user_id)
-        except Exception:
-            return None
-
-        doc = await self._collection().find_one({"_id": user_id})
-        return self._format_doc(doc)
-
-    async def get_by_email(self, email: str):
-        email = email.strip().lower()
-
-        doc = await self._collection().find_one({
-            "email": email
-        })
-
-        return self._format_doc(doc)
-
-    async def get_by_username(self, username: str):
-        username = username.strip().lower()
-
-        doc = await self._collection().find_one({
-            "username": username
-        })
-
-        return self._format_doc(doc)
-
-    async def get_by_phone(self, phone_number: str):
-        phone_number = phone_number.strip()
-
-        doc = await self._collection().find_one({
-            "phone_number": phone_number
-        })
-
-        return self._format_doc(doc)
-
-    async def get_by_identifier(self, identifier: str):
-        identifier = identifier.strip().lower()
-
-        doc = await self._collection().find_one({
-            "$or": [
-                {"email": identifier},
-                {"username": identifier}
-            ]
-        })
-
-        return self._format_doc(doc)
-
-    async def check_conflicts(self,email: str,username: str,phone_number: str,exclude_id: Optional[str] = None) -> List[str]:
-
-        conflicts = []
-
-        email = email.strip().lower()
-        username = username.strip().lower()
-        phone_number = phone_number.strip()
-
-        query = {}
-
-        if exclude_id:
-            try:
-                query = {"_id": {"$ne": ObjectId(exclude_id)}}
-            except Exception:
-                pass
-
-        if await self._collection().find_one({
-            "email": email,
-            **query
-        }):
-            conflicts.append("Email already registered")
-
-        if await self._collection().find_one({
-            "username": username,
-            **query
-        }):
-            conflicts.append("Username already taken")
-
-        if await self._collection().find_one({
-            "phone_number": phone_number,
-            **query
-        }):
-            conflicts.append("Phone number already registered")
-
-        return conflicts
-
-    async def create_user(self, user_dict: Dict[str, Any]):
-        now = datetime.now(timezone.utc)
-
-        user_dict["created_at"] = now
-        user_dict["updated_at"] = now
-
-        result = await self._collection().insert_one(user_dict)
-
-        user_dict["id"] = str(result.inserted_id)
-        user_dict.pop("_id", None)
-
-        return user_dict
-
-    async def list_users(
+    async def create_user(
         self,
-        skip: int = 0,
-        limit: int = 50
-    ):
-        cursor = (
-            self._collection()
-            .find()
-            .sort("created_at", -1)
-            .skip(skip)
-            .limit(limit)
-        )
+        email: str,
+        username: str,
+        password_hash: str,
+        phone_number: Optional[str] = None,
+        role: str = "customer"
+    ) -> dict:
+        """Create a new user"""
+        user = {
+            "email": email,
+            "username": username,
+            "password_hash": password_hash,
+            "phone_number": phone_number,
+            "role": role,
+            "password_reset_token": None,
+            "password_reset_expires": None,
+            "created_at": datetime.utcnow(),
+            "updated_at": datetime.utcnow()
+        }
+        result = await self.collection.insert_one(user)
+        user["_id"] = result.inserted_id
+        return user
 
-        users = []
+    async def get_by_id(self, user_id: str) -> Optional[dict]:
+        """Get user by ID"""
+        from bson import ObjectId
+        try:
+            return await self.collection.find_one({"_id": ObjectId(user_id)})
+        except Exception as e:
+            logger.error(f"Error fetching user by ID {user_id}: {str(e)}")
+            return None
 
-        async for doc in cursor:
-            users.append(self._format_doc(doc))
+    async def get_by_email(self, email: str) -> Optional[dict]:
+        """Get user by email"""
+        return await self.collection.find_one({"email": email})
 
-        return users
+    async def get_by_username(self, username: str) -> Optional[dict]:
+        """Get user by username"""
+        return await self.collection.find_one({"username": username})
+
+    async def get_by_phone_number(self, phone_number: str) -> Optional[dict]:
+        """Get user by phone number"""
+        return await self.collection.find_one({"phone_number": phone_number})
+
+    async def update_reset_token(
+        self,
+        user_id: str,
+        reset_token: str,
+        expires_at: datetime
+    ) -> dict:
+        """Update user's password reset token and expiry"""
+        from bson import ObjectId
+        try:
+            result = await self.collection.find_one_and_update(
+                {"_id": ObjectId(user_id)},
+                {
+                    "$set": {
+                        "password_reset_token": reset_token,
+                        "password_reset_expires": expires_at,
+                        "updated_at": datetime.utcnow()
+                    }
+                },
+                return_document=True
+            )
+            return result
+        except Exception as e:
+            logger.error(f"Error updating reset token for user {user_id}: {str(e)}")
+            raise
+
+    async def update_password(
+        self,
+        user_id: str,
+        password_hash: str
+    ) -> dict:
+        """Update user password and clear reset token"""
+        from bson import ObjectId
+        try:
+            result = await self.collection.find_one_and_update(
+                {"_id": ObjectId(user_id)},
+                {
+                    "$set": {
+                        "password_hash": password_hash,
+                        "password_reset_token": None,
+                        "password_reset_expires": None,
+                        "updated_at": datetime.utcnow()
+                    }
+                },
+                return_document=True
+            )
+            logger.info(f"Password updated for user {user_id}")
+            return result
+        except Exception as e:
+            logger.error(f"Error updating password for user {user_id}: {str(e)}")
+            raise
+
+    async def list_all(self) -> List[dict]:
+        """List all users"""
+        return await self.collection.find().to_list(length=None)
+
+    async def delete_by_id(self, user_id: str) -> bool:
+        """Delete user by ID"""
+        from bson import ObjectId
+        try:
+            result = await self.collection.delete_one({"_id": ObjectId(user_id)})
+            return result.deleted_count > 0
+        except Exception as e:
+            logger.error(f"Error deleting user {user_id}: {str(e)}")
+            return False
 
 
-user_repository = UserRepository()
+user_repository = UserRepository(db)
