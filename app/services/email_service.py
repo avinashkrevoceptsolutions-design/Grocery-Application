@@ -1,101 +1,114 @@
-
+import logging
+from typing import Optional
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-
 from app.core.config import settings
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
+
+logger = logging.getLogger(__name__)
 
 
 class EmailService:
+    def __init__(self):
+        self.smtp_server = settings.SMTP_SERVER
+        self.smtp_port = settings.SMTP_PORT
+        self.smtp_username = settings.SMTP_USERNAME
+        self.smtp_password = settings.SMTP_PASSWORD
+        self.mail_from = settings.MAIL_FROM
+        self.executor = ThreadPoolExecutor(max_workers=2)
 
-    async def send_email(self, to_email, subject, body):
-        if isinstance(to_email, str):
-            recipients = [to_email]
-        else:
-            recipients = to_email
+    async def send_password_reset_email(self, email: str, reset_token: Optional[str] = None) -> bool:
+        """Send password reset email to user"""
+        if not all([self.smtp_server, self.smtp_username, self.smtp_password, self.mail_from]):
+            logger.warning("SMTP configuration incomplete. Email service disabled.")
+            return False
 
-        message = MIMEMultipart()
-        message["From"] = settings.MAIL_FROM or settings.SMTP_USERNAME
-        message["To"] = ", ".join(recipients)
-        message["Subject"] = subject
+        try:
+            # Create reset link - frontend should handle token parameter
+            reset_link = f"{settings.FRONTEND_URL}/reset-password?token={reset_token}" if reset_token and settings.FRONTEND_URL else "[Password Reset Link]"
+            
+            subject = "Password Reset Request"
+            html_content = f"""
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+                    .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+                    .header {{ background-color: #4CAF50; color: white; padding: 20px; text-align: center; border-radius: 5px 5px 0 0; }}
+                    .content {{ background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd; }}
+                    .footer {{ background-color: #f0f0f0; padding: 10px; text-align: center; font-size: 12px; border-radius: 0 0 5px 5px; }}
+                    .button {{ background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 20px 0; }}
+                    .warning {{ color: #d9534f; font-weight: bold; }}
+                    .expires {{ color: #666; font-size: 14px; margin-top: 20px; }}
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="header">
+                        <h1>Password Reset Request</h1>
+                    </div>
+                    <div class="content">
+                        <p>Hello,</p>
+                        <p>We received a request to reset the password for your account associated with this email address.</p>
+                        <p>Click the button below to reset your password:</p>
+                        <a href="{reset_link}" class="button">Reset Password</a>
+                        <p>Or copy and paste this link in your browser:</p>
+                        <p>{reset_link}</p>
+                        <p class="expires">⏱️ This link will expire in <strong>15 minutes</strong>.</p>
+                        <p class="warning">⚠️ If you did not request a password reset, please ignore this email or contact support immediately.</p>
+                        <p>For security reasons, never share this link with anyone.</p>
+                    </div>
+                    <div class="footer">
+                        <p>&copy; 2024 Our Service. All rights reserved.</p>
+                    </div>
+                </div>
+            </body>
+            </html>
+            """
 
-        message.attach(MIMEText(body, "plain"))
-
-        server = smtplib.SMTP(
-            settings.SMTP_HOST,
-            settings.SMTP_PORT
-        )
-
-        server.starttls()
-        server.login(
-            settings.SMTP_USERNAME,
-            settings.SMTP_PASSWORD
-        )
-
-        server.sendmail(
-            settings.MAIL_FROM or settings.SMTP_USERNAME,
-            recipients,
-            message.as_string()
-        )
-
-        server.quit()
-
-    async def send_order_notifications(self, customer, order):
-        order_items = []
-
-        for item in order["items"]:
-            order_items.append(
-                f"- {item['name']}: "
-                f"Quantity {item['quantity']}, "
-                f"Price {item['price']:.2f}, "
-                f"Total {item['total_price']:.2f}"
+            # Send email asynchronously
+            loop = asyncio.get_event_loop()
+            result = await loop.run_in_executor(
+                self.executor,
+                self._send_smtp_email,
+                email,
+                subject,
+                html_content
             )
+            return result
 
-        order_details = (
-            f"Order ID: {order['id']}\n"
-            f"Order date: {order['created_at']}\n"
-            f"Status: {order['status']}\n\n"
-            f"Products:\n"
-            f"{chr(10).join(order_items)}\n\n"
-            f"Total amount: {order['total_amount']:.2f}"
-        )
+        except Exception as e:
+            logger.error(f"Failed to send password reset email to {email}: {str(e)}")
+            return False
 
-        customer_body = (
-            "Your order has been placed.\n\n"
-            "Order details:\n"
-            f"{order_details}"
-        )
+    def _send_smtp_email(self, to_email: str, subject: str, html_content: str) -> bool:
+        """Send email via SMTP (blocking operation)"""
+        try:
+            # Create message
+            message = MIMEMultipart("alternative")
+            message["Subject"] = subject
+            message["From"] = self.mail_from
+            message["To"] = to_email
 
-        await self.send_email(
-            customer["email"],
-            "Your order has been placed",
-            customer_body
-        )
+            # Attach HTML content
+            html_part = MIMEText(html_content, "html")
+            message.attach(html_part)
 
-    
-        customer_name = (
-            f"{customer.get('first_name', '')} "
-            f"{customer.get('last_name', '')}"
-        )
+            # Send email
+            with smtplib.SMTP(self.smtp_server, self.smtp_port) as server:
+                server.starttls()
+                server.login(self.smtp_username, self.smtp_password)
+                server.send_message(message)
 
-        admin_body = (
-            "A new order has been placed.\n\n"
-            "Customer details:\n"
-            f"Customer ID: {customer.get('id')}\n"
-            f"Name: {customer_name}\n"
-            f"Email: {customer.get('email')}\n"
-            f"Username: {customer.get('username')}\n"
-            f"Phone: {customer.get('phone_number')}\n"
-            f"Role: {customer.get('role')}\n\n"
-            "Order details:\n"
-            f"{order_details}"
-        )
+            logger.info(f"Password reset email sent to: {to_email}")
+            return True
 
-        await self.send_email(
-            settings.ADMIN_EMAIL,
-            "Order has been placed",
-            admin_body
-        )
+        except Exception as e:
+            logger.error(f"SMTP error sending to {to_email}: {str(e)}")
+            return False
 
 
 email_service = EmailService()
